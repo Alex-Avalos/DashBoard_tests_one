@@ -10,14 +10,18 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 </head>
 <body>
+    <h1>Mujeres</h1>
+    <div id="app"></div>
     <script>
+        const $app=document.getElementById("app");
         const h = React.createElement;
-        const Avatar=parms=>{
+        const Avatar=params=>{
             const src=`https://randomuser.me/api/portraits/women/${
                 params.id
             }.jpg`;
             return h('img',{src});
-        }
+        };
+        ReactDOM.render(h(Avatar,{id:15}),$app);
     </script>
 </body>
 </html>
